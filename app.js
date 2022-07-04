@@ -8,7 +8,7 @@ class councillorWidget {
             $('#councillor-content').empty()
             return
         }
-
+        
         $('#councillor-content').empty().append('<p>Retrieving information...</p>')
 
         const payload = {
@@ -18,7 +18,7 @@ class councillorWidget {
             }
         }
 
-        runLookup('609b918c7dd6d', payload).then((response) => {            
+        runLookup('62b03c3057187', payload).then((response) => {
             if (response.success) {
                 this.councillor = response.data[0].councillor
                 this.displayResults()
@@ -34,7 +34,7 @@ class councillorWidget {
         content += '<img src="https://apps-cheshire-east.s3.amazonaws.com/staging/Waste/service-icons/food.png" alt="Councillor potrait">'
         content += '</div>'
         content += '<div class="councillor-content-name">'
-        content += '<p>' + this.name + '</p>'
+        content += '<p>' + this.councillor + '</p>'
         content += '</div>'
 
         $('#councillor-content').empty().append(content)
