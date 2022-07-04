@@ -1,3 +1,7 @@
+#councillor-content {
+	display: flex;
+}
+
 #councillor-content-picture img {
     width: 200px;
 }
