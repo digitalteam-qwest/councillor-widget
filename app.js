@@ -21,6 +21,7 @@ class councillorWidget {
         runLookup('62b03c3057187', payload).then((response) => {
             if (response.success) {
                 this.councillor = response.data[0].councillor
+                this.party = response.data[0].party
                 this.displayResults()
             } else {
                 this.displayError()
@@ -30,11 +31,12 @@ class councillorWidget {
 
     displayResults () {
         let content = ''
-        content += '<div class="councillor-content-picture">'
+        content += '<div id="councillor-content-picture">'
         content += '<img src="https://apps-cheshire-east.s3.amazonaws.com/staging/Waste/service-icons/food.png" alt="Councillor potrait">'
         content += '</div>'
-        content += '<div class="councillor-content-name">'
+        content += '<div id="councillor-content-details">'
         content += '<p>' + this.councillor + '</p>'
+        content += '<p>' + this.party + '</p>'
         content += '</div>'
 
         $('#councillor-content').empty().append(content)
