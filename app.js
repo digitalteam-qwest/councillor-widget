@@ -32,7 +32,7 @@ class councillorWidget {
     displayResults () {
         let content = ''
         content += '<div id="councillor-content-picture">'
-        content += '<img src="https://apps-cheshire-east.s3.amazonaws.com/staging/Waste/service-icons/food.png" alt="Councillor potrait">'
+        content += '<img src="https://apps-cheshire-west.s3.amazonaws.com/staging/testFiles/potrait.png" alt="Councillor potrait">'
         content += '</div>'
         content += '<div id="councillor-content-details">'
         content += '<p>' + this.councillor + '</p>'
